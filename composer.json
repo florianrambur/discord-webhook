@@ -6,6 +6,12 @@
             "email": "florianrambur@gmail.com"
         }
     ],
+    "keywords": [
+        "php",
+        "package",
+        "discord",
+        "webhook"
+    ],
     "require": {
         "php": "^7.0",
         "guzzlehttp/guzzle": "^7.3",
