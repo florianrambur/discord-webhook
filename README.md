@@ -1,5 +1,10 @@
 # Discord Webhook
 
+## Installation
+```
+composer require florianrambur/discord-webhook
+```
+
 ## Usage 
 Here is a simple example
 ```php
