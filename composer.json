@@ -1,0 +1,27 @@
+{
+    "name": "florianrambur/discord-webhook",
+    "authors": [
+        {
+            "name": "Florian Rambur",
+            "email": "florianrambur@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/support": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlorianRambur\\DiscordWebhook\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FlorianRambur\\DiscordWebhook\\Tests\\": "tests/"
+        }
+    }
+}
