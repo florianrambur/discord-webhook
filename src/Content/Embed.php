@@ -22,6 +22,17 @@ class Embed implements Arrayable
         return $this;
     }
 
+    public function addMany(array $attributes): Embed
+    {
+        array_map(function ($attribute) {
+            
+            $this->add($attribute);
+
+        }, $attributes);
+
+        return $this;
+    }
+
     public function toArray(): array
     {
         $attributes = $this->attributes->toArray();

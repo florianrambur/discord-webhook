@@ -9,9 +9,30 @@ class Footer implements Attribute, Arrayable
 {   
     protected $attributes;
 
-    public function __construct(array $attributes)
+    public function __construct(array $attributes = [])
     {
         $this->attributes = $attributes;
+    }
+
+    public function text(string $text): Footer
+    {
+        $this->attributes['text'] = $text;
+
+        return $this;
+    }
+    
+    public function iconUrl(string $iconUrl): Footer
+    {
+        $this->attributes['icon_url'] = $iconUrl;
+
+        return $this;
+    }
+    
+    public function timestamp(string $timestamp): Footer
+    {
+        $this->attributes['timestamp'] = $timestamp;
+
+        return $this;
     }
 
     public function toArray(): array

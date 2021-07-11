@@ -5,7 +5,7 @@ namespace FlorianRambur\DiscordWebhook\Content\Attributes;
 use Illuminate\Contracts\Support\Arrayable;
 use FlorianRambur\DiscordWebhook\Content\Attributes\Interfaces\Attribute;
 
-class Author implements Attribute, Arrayable
+class Image implements Attribute, Arrayable
 {
     protected $attributes;
 
@@ -13,24 +13,17 @@ class Author implements Attribute, Arrayable
     {
         $this->attributes = $attributes;
     }
-    
-    public function name(string $name): Author
+
+    public function image(string $url): Image
     {
-        $this->attributes['name'] = $name;
+        $this->attributes['image'] = $url;
 
         return $this;
     }
-    
-    public function url(string $url): Author
-    {
-        $this->attributes['url'] = $url;
 
-        return $this;
-    }
-    
-    public function iconUrl(string $iconUrl): Author
+    public function thumbnail(string $url): Image
     {
-        $this->attributes['icon_url'] = $iconUrl;
+        $this->attributes['thumbnail'] = $url;
 
         return $this;
     }
@@ -38,7 +31,12 @@ class Author implements Attribute, Arrayable
     public function toArray(): array
     {
         return [
-            'author' => $this->attributes,
+            'image' => [
+                'url' => $this->attributes['image'] ?? null,
+            ],
+            'thumbnail' => [
+                'url' => $this->attributes['thumbnail'] ?? null,
+            ],
         ];
     }
 }

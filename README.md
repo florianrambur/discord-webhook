@@ -29,7 +29,7 @@ $response = $client->send([
 ![Simple Example](https://i.ibb.co/f9ycPF9/simple-example.png)
 
 ## Work with Embed
-This package give you the opportunity to work with a simple `Embed` class that allow you to create an advanced message
+This package give you the opportunity to work with a simple `Embed` class that allow you to create an advanced message. To do that, you can pass data into the constructor or use some methods like `name($value)`
 ```php
 <?php
 
@@ -51,6 +51,43 @@ $embed = (new Embed())
         'text' => 'This is the footer',
         'timestamp' => '2021-07-06T22:00:00.000Z',
     ]));
+```
+
+```php
+<?php
+
+$author = (new Author())
+    ->name('This is the author')
+    ->url('https://github.com/florianrambur/discord-webhook')
+    ->iconUrl('https://github.com/florianrambur/discord-webhook/icon.jpg');
+
+$body = (new Body())
+    ->title('Webhook Title')
+    ->description('Webhook Description')
+    ->color(5814783);
+
+$image = (new Image())->image('https://i.imgur.com/ZGPxFN2.jpg');
+
+$footer = (new Footer())
+    ->text('This is the footer')
+    ->timestamp('2021-07-06T22:00:00.000Z');
+
+$embed = (new Embed())->addMany([$author, $body, $image, $footer]);
+```
+The `Embed` provides two methods to add an attribute class
+```php
+<?php
+
+(new Embed())
+    ->add($body)
+    ->add($footer);
+
+(new Embed())->addMany([$body, $footer]);
+```
+
+Then, pass your data and your config to the `Client` class
+```php
+<?php
 
 $config = [
     'url' => 'https://your-discord-webhook-url',
