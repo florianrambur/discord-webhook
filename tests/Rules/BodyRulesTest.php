@@ -2,10 +2,10 @@
 
 namespace FlorianRambur\DiscordWebhook\Tests;
 
+use PHPUnit\Framework\TestCase;
+use Illuminate\Support\Collection;
 use FlorianRambur\DiscordWebhook\Content\Rules\BodyRules;
 use FlorianRambur\DiscordWebhook\Exceptions\InvalidAttributeException;
-use Illuminate\Support\Collection;
-use PHPUnit\Framework\TestCase;
 
 class BodyRulesTest extends TestCase
 {
