@@ -44,7 +44,7 @@ $embed = (new Embed())
         'description' => 'Webhook Description',
         'color' => 5814783,
     ]))
-    ->add(new Images([
+    ->add(new Image([
         'images' => ['https://i.imgur.com/ZGPxFN2.jpg'],
     ]))
     ->add(new Footer([
