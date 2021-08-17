@@ -109,5 +109,5 @@ $response = $client->send([
 
 ## What's next
 This package is under development and few things are missing :
-- constraints on attributes (e.g check if every fields are ok)
+- some constraints on attributes are missing
 - few templates will be created to give you the possibility to create a message easier and faster
