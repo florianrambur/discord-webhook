@@ -1,5 +1,6 @@
 {
     "name": "florianrambur/discord-webhook",
+    "license": "MIT",
     "authors": [
         {
             "name": "Florian Rambur",
